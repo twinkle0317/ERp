@@ -1,0 +1,202 @@
+/* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background: #2c3e50;
+    color: #fff;
+    min-width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar .logo h2 {
+    margin: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover,
+  .sidebar ul li a.active {
+    background: #1abc9c;
+    color: #fff;
+  }
+  
+  /* Main Content Styling */
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+  }
+  
+  .toggle-btn {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px #05c390(0, 0, 0, 0.1);
+    width: 1000px;
+    align-items: center;
+    color: #000000;
+    
+ 
+
+  }
+  
+
+  
+  /* Courses Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+  }
+  
+  table thead {
+    background: #1abc9c;
+    color: #fff;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Notices Card */
+  .notice-card {
+    background: #fff;
+    border-left: 5px solid #1abc9c;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Fees Status */
+  .fees-status {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 50px;
+    background: #fff;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .fees-status .success {
+    color: green;
+  }
+  
+  /* Attendance Bar Graph */
+  .chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .chart-container .bar {
+    width: 15%;
+    background: #05c390;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    overflow: hidden;
+  }
+  
+  .chart-container .bar span {
+    bottom: 5px;
+    width: 100%;
+  }
+  .hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 20%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: absolute;
+      left: -250px;
+    }
+  
+    .sidebar.active {
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  
+    .toggle-btn {
+      display: block;
+    }
+  }
+  
